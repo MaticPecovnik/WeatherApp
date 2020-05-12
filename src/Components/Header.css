@@ -1,0 +1,37 @@
+.header__container {
+  background-color: black;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.app_logo__container {
+  width: 7.5%;
+  margin: 0 1%;
+}
+
+.app_logo {
+  width: 100%;
+}
+
+.app_name__container {
+  width: 12.5%;
+  margin: 0 1%;
+}
+
+.app_name {
+  color: white;
+  font-size: 2.7rem;
+}
+
+.info__container {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 60%;
+  height: 15vh;
+  margin: 0 1%;
+}
