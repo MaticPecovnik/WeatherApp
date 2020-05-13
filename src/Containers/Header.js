@@ -1,9 +1,10 @@
 import React from "react";
+
+import GeolocationWeather from "../Components/GeolocationWeather";
+
 import "./Header.css";
 
-const Header = ({ coords }) => {
-  console.log(coords);
-
+const Header = () => {
   return (
     <div className="header__container">
       <div className="app_logo__container">
@@ -19,8 +20,7 @@ const Header = ({ coords }) => {
         </h1>
       </div>
       <div className="info__container">
-        Your latitude is {coords.latitude} and your longitude is{" "}
-        {coords.longitude}.
+        <GeolocationWeather />
       </div>
     </div>
   );
