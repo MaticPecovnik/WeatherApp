@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 
-const useGeolocation = () => {
+const useCurrentLocationWeather = () => {
   const [coords, setCoords] = useState({ latitude: 0, longitude: 0 });
   const [locationInfo, setLocationInfo] = useState({
     LocalizedName: "",
     CountryID: "",
     apiLocalID: 0,
+    coords: {},
   });
-
+  const [forecast, setForecast] = useState([]);
   const [currentWeatherInfo, setCurrentWeatherInfo] = useState({
     temperature: 0,
     WeatherIcon: "",
@@ -55,6 +56,7 @@ const useGeolocation = () => {
               LocationName: data.EnglishName,
               CountryName: data.Country.EnglishName,
               apiLocalID: data.Key,
+              coords: coords,
             });
           });
         })
@@ -64,12 +66,19 @@ const useGeolocation = () => {
     }
   }, [coords]);
 
-  //using the ID of the geolocation, current weather is requested
+  //using the ID of the geolocation, current weather is requested and weather forecast for 5 days
   useEffect(() => {
-    const apiUrl = "http://dataservice.accuweather.com/currentconditions/v1/";
+    const currWeatherApiUrl =
+      "http://dataservice.accuweather.com/currentconditions/v1/";
+    const forecastApiUrl =
+      "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" +
+      `${locationInfo.apiLocalID}?` +
+      apiKey +
+      "&metric=true";
 
     if (locationInfo.apiLocalID !== 0) {
-      fetch(apiUrl + `${locationInfo.apiLocalID}?` + apiKey)
+      // GET current weather
+      fetch(currWeatherApiUrl + `${locationInfo.apiLocalID}?` + apiKey)
         .then((res) => {
           res.json().then((data) => {
             setCurrentWeatherInfo({
@@ -82,11 +91,22 @@ const useGeolocation = () => {
         .catch((err) => {
           console.log(err);
         });
+
+      //GET 5-day weather forecast
+      fetch(forecastApiUrl)
+        .then((res) => {
+          res.json().then((data) => {
+            setForecast(data.DailyForecasts);
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locationInfo]);
 
-  return [locationInfo, currentWeatherInfo];
+  return [locationInfo, currentWeatherInfo, forecast];
 };
 
-export default useGeolocation;
+export default useCurrentLocationWeather;
