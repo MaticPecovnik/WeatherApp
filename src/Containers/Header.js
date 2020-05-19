@@ -19,7 +19,7 @@ const Header = () => {
           <u>Weatherify</u>
         </h1>
       </div>
-      <div className="info__container">
+      <div className="current_location_sup">
         <GeolocationWeather />
       </div>
     </div>

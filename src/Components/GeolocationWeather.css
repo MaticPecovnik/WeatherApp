@@ -1,0 +1,29 @@
+.current_location_sub {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 27% 67%;
+  column-gap: 6%;
+  grid-template-areas: "basicInfo forecast";
+}
+
+.weather__container_sup {
+  grid-area: basicInfo;
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0.7rem 1rem;
+  border: 3px solid orange;
+  border-radius: 20px;
+}
+
+.forecast__container {
+  grid-area: forecast;
+  background-color: white;
+  border: 3px solid orange;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}

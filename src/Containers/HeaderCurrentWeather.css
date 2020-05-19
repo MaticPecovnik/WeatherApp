@@ -1,0 +1,51 @@
+.weather__container_sub {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 59% 39%;
+  grid-template-rows: 18% 78%;
+  column-gap: 2%;
+  row-gap: 4%;
+  grid-template-areas:
+    "date date"
+    "locationInfo currentWeather";
+}
+
+.date__container {
+  grid-area: date;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.location_info__container {
+  grid-area: locationInfo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location__container {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.coordinates__container {
+  font-size: 0.7rem;
+}
+
+.weather__container {
+  margin-top: 0.2rem;
+}
+
+.current_weather__container {
+  grid-area: currentWeather;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather_icon {
+  width: 100%;
+}

@@ -5,12 +5,11 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.9rem 0;
 }
 
 .app_logo__container {
-  width: 7.5%;
-  margin: 0 1%;
+  width: 8%;
 }
 
 .app_logo {
@@ -18,20 +17,16 @@
 }
 
 .app_name__container {
-  width: 12.5%;
-  margin: 0 1%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
 }
 
 .app_name {
   color: white;
-  font-size: 2.7rem;
+  font-size: 3.2rem;
 }
 
-.info__container {
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  width: 60%;
-  height: 15vh;
-  margin: 0 1%;
+.current_location_sup {
+  width: 65%;
 }

@@ -4,6 +4,8 @@ import useCurrentLocationWeather from "../Hooks/useCurrentLocationWeather";
 import HeaderCurrentWeather from "../Containers/HeaderCurrentWeather";
 import HeaderDayForecast from "../Containers/HeaderDayForecast";
 
+import "./GeolocationWeather.css";
+
 const GeolocationWeather = () => {
   const [
     locationInfo,
@@ -17,17 +19,19 @@ const GeolocationWeather = () => {
     forecast.length !== 0
   ) {
     return (
-      <React.Fragment>
-        <HeaderCurrentWeather
-          locationInfo={locationInfo}
-          currentWeatherInfo={currentWeatherInfo}
-        />
+      <div className="current_location_sub">
+        <div className="weather__container_sup">
+          <HeaderCurrentWeather
+            locationInfo={locationInfo}
+            currentWeatherInfo={currentWeatherInfo}
+          />
+        </div>
         <div className="forecast__container">
           {forecast.map((dailyForecast, i) => {
             return <HeaderDayForecast key={i} dailyForecast={dailyForecast} />;
           })}
         </div>
-      </React.Fragment>
+      </div>
     );
   } else {
     return <React.Fragment></React.Fragment>;

@@ -96,7 +96,7 @@ const useCurrentLocationWeather = () => {
       fetch(forecastApiUrl)
         .then((res) => {
           res.json().then((data) => {
-            setForecast(data.DailyForecasts);
+            setForecast(data.DailyForecasts.slice(1, 5));
           });
         })
         .catch((err) => {
