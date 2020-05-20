@@ -1,0 +1,31 @@
+.main {
+}
+
+.header__container_sup {
+  width: 100vw;
+}
+
+.content__container {
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  column-gap: 3.5%;
+  grid-template-areas: "popLocations1 search popLocations2";
+}
+
+.search__container_sup {
+  grid-area: search;
+  border: 1px solid red;
+}
+
+.popular_locations__container_1 {
+  grid-area: popLocations1;
+  border: 1px solid black;
+}
+
+.popular_locations__container_2 {
+  grid-area: popLocations2;
+  border: 1px solid black;
+}

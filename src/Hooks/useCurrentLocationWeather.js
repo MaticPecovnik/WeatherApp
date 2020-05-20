@@ -54,7 +54,7 @@ const useCurrentLocationWeather = () => {
           res.json().then((data) => {
             setLocationInfo({
               LocationName: data.EnglishName,
-              CountryName: data.Country.EnglishName,
+              CountryName: data.Country.ID,
               apiLocalID: data.Key,
               coords: coords,
             });
@@ -82,7 +82,7 @@ const useCurrentLocationWeather = () => {
         .then((res) => {
           res.json().then((data) => {
             setCurrentWeatherInfo({
-              temperature: data[0].Temperature.Metric.Value,
+              temperature: Math.floor(data[0].Temperature.Metric.Value),
               WeatherIcon: data[0].WeatherIcon,
               WeatherText: data[0].WeatherText,
             });

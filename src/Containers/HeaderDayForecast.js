@@ -25,8 +25,6 @@ const HeaderDayForecast = ({ dailyForecast }) => {
       : `rgb(255, ${(255 / (max / 4 + (3 * min) / 4)) * (max - value)}, 0)`; //goes from rgb(255, 255, 0) at 3 * (max - min) / 4 to rgb(255, 0, 0) at max
   };
 
-  console.log(setColor(0, 30, 22));
-
   return (
     <div className="header_day_forecast__container">
       <div className="forecast_date__container">{date}</div>

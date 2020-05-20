@@ -1,0 +1,5 @@
+.popular_locations__container_sub {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

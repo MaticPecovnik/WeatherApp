@@ -14,7 +14,7 @@
   grid-area: date;
   font-weight: 600;
   font-size: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .location_info__container {
@@ -26,16 +26,17 @@
 }
 
 .location__container {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
 .coordinates__container {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .weather__container {
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
+  font-size: 1rem;
 }
 
 .current_weather__container {
@@ -47,5 +48,5 @@
 }
 
 .weather_icon {
-  width: 100%;
+  width: 130%;
 }
