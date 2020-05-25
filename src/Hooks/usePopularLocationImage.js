@@ -60,7 +60,7 @@ const usePopularLocationImage = (name) => {
         "https://pix10.agoda.net/hotelImages/812/8126/8126_17021016250050910141.jpg?s=1024x768",
     },
     {
-      locationName: "Dehli",
+      locationName: "Delhi",
       imageUrl:
         "https://cdn.tourradar.com/s3/tour/1500x800/154696_881100ff.jpg",
     },
@@ -201,7 +201,7 @@ const usePopularLocationImage = (name) => {
     {
       locationName: "Toronto",
       imageUrl:
-        "https://lh3.googleusercontent.com/proxy/5jYF7yQn3L0uSzjwT3lvJ3DFmehw7Cd-t3cm5nDQNSSmxaqijukmt4T2SSBMKHZx_lbDzKz6hUBu476baWG93t62bc17jwThVCk1-vGXZ_nXc8UzZSwICm3ogSINtTCCDaK-i6Lb0mSTz8J0TsQ",
+        "https://www.toronto.ca/wp-content/uploads/2020/03/94a1-emergency-home-page-skyline.jpg",
     },
     {
       locationName: "Osaka-shi",
@@ -236,6 +236,16 @@ const usePopularLocationImage = (name) => {
       locationName: "Jerusalem",
       imageUrl:
         "https://www.touristisrael.com/wp-content/uploads/210910570-4.jpg",
+    },
+    {
+      locationName: "Honolulu",
+      imageUrl:
+        "https://www.jetstar.com/_/media/inspiration-hub/article-images/19oct/hawaii-honolulu-need-to-know/hero_hawaii_honolulu.jpg?rev=cf08627cd0164b12b48d7e2af03abec6&w=1050&rc=1&cw=1050&ch=590&cx=55&cy=0&hash=67AF8851437B4D5433D7F1886992F8120F580B73",
+    },
+    {
+      locationName: "Tehran",
+      imageUrl:
+        "https://images.adsttc.com/media/images/5bd2/6055/f197/cc96/d000/067e/newsletter/Tehran-e1477041764483-916x515.jpg?1540513872",
     },
   ];
 

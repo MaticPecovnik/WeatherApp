@@ -17,13 +17,13 @@ const Main = () => {
         <Header />
       </div>
       <div className="content__container">
-        <div className="popular_locations__container_1">
+        <div className="popular_locations__container_1 popular_locations__container_sup">
           <PopularLocations popularLocations={popularLocations.slice(0, 2)} />
         </div>
         <div className="search__container_sup">
           <SearchLocations />
         </div>
-        <div className="popular_locations__container_2">
+        <div className="popular_locations__container_2 popular_locations__container_sup">
           <PopularLocations popularLocations={popularLocations.slice(2, 4)} />
         </div>
       </div>

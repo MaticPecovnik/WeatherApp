@@ -6,7 +6,7 @@
 }
 
 .content__container {
-  width: 80%;
+  width: 95%;
   margin: auto;
   padding: 1rem 0;
   display: grid;
@@ -22,10 +22,15 @@
 
 .popular_locations__container_1 {
   grid-area: popLocations1;
-  border: 1px solid black;
 }
 
 .popular_locations__container_2 {
   grid-area: popLocations2;
-  border: 1px solid black;
+}
+
+.popular_locations__container_sup {
+  padding: 0.8rem;
+  background-color: black;
+  border: 0.01px solid black;
+  border-radius: 20px;
 }

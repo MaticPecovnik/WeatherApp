@@ -1,12 +1,64 @@
 .pop_location_card__container {
+  width: 90%;
+  margin: 2.5%;
+  padding: 2.5%;
+  border: 3px solid orange;
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 54% 44%;
+  grid-template-rows: 29% 69%;
+  column-gap: 2%;
+  row-gap: 4%;
+  grid-template-areas:
+    "info info"
+    "image weather";
+}
+
+.general_info__container {
   width: 100%;
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  margin-bottom: 1%;
+}
+
+.name__container {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .image__container {
-  width: 80%;
-  margin: auto;
+  grid-area: image;
+  width: 100%;
+  overflow: hidden;
 }
 
-.popular_loc_image {
+.popular_location_image {
+  object-fit: contain;
   width: 100%;
+}
+
+.all_info__container {
+  grid-area: weather;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather_info__container {
+  margin-bottom: 1rem;
+}
+
+.weather_icon__container {
+  width: 90%;
+}
+
+.weather_icon {
+  width: 100%;
+  margin: auto;
 }
