@@ -10,18 +10,18 @@
   grid-area: basicInfo;
   width: 100%;
   background-color: white;
-  border: 1px solid black;
-  border-radius: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
   padding: 0.7rem 1rem;
-  border: 3px solid orange;
+  border: 3px solid white;
   border-radius: 20px;
 }
 
 .forecast__container {
   grid-area: forecast;
   background-color: white;
-  border: 3px solid orange;
-  border-radius: 20px;
+  border: 3px solid white;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -80,6 +80,7 @@ const useCurrentLocationWeather = () => {
       // GET current weather
       fetch(currWeatherApiUrl + `${locationInfo.apiLocalID}?` + apiKey)
         .then((res) => {
+          console.log(res);
           res.json().then((data) => {
             setCurrentWeatherInfo({
               temperature: Math.floor(data[0].Temperature.Metric.Value),

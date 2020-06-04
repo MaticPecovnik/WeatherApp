@@ -17,7 +17,6 @@
 
 .search__container_sup {
   grid-area: search;
-  border: 1px solid red;
 }
 
 .popular_locations__container_1 {
