@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { debounce } from "lodash";
 
 import "./SearchLocations.css";
@@ -42,6 +43,7 @@ const SearchLocations = () => {
           res
             .json()
             .then((data) => {
+              console.log(data);
               setSuggestionList(data); //saves the returned suggestions list to "suggestionList"
             })
             .catch((err) => console.log(err));
@@ -79,18 +81,14 @@ const SearchLocations = () => {
       <div className="suggestions__container">
         {suggestionList.map((suggestion, k) => {
           return (
-            <div
-              className="suggestion"
+            <Link
+              to={`/location/${suggestion.LocalizedName}/${suggestion.Country.ID}`}
               key={k}
-              onClick={(e) => {
-                console.log(suggestion.Key);
-              }}
+              className="suggestion"
             >
               <div className="city_name">{suggestion.LocalizedName}</div>
-              <div className="country_name">
-                {suggestion.Country.LocalizedName}
-              </div>
-            </div>
+              <div className="country_name">{suggestion.Country.ID}</div>
+            </Link>
           );
         })}
       </div>

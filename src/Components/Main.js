@@ -1,13 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "../Containers/Header";
 import SearchLocations from "../Components/SearchLocations";
 import PopularLocations from "../Components/PopularLocations";
+import SelectedLocation from "../Components/SelectedLocation";
 
 import usePopularLocations from "../Hooks/usePopularLocations";
 
 import "./Main.css";
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Main} />
+        <Route
+          path="/location/:cityName/:countryID"
+          component={SelectedLocation}
+        />
+      </Switch>
+    </Router>
+  );
+};
 
 const Main = () => {
   const popularLocations = usePopularLocations();
@@ -32,4 +47,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default App;
