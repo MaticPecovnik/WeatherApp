@@ -31,7 +31,7 @@ const SearchLocations = () => {
 
   //handles the behaviour of the app as the controlled input components value changes
   const onChange = (value) => {
-    const apiKey = "apikey=Hydrjh5zJvGkKsYIM4nAMIntEstLgGjx";
+    const apiKey = "apikey=R9EfisYbJAGY8KGcfymWyGAYGuNUdrIU"; //apikey=R9EfisYbJAGY8KGcfymWyGAYGuNUdrIU apikey=Hydrjh5zJvGkKsYIM4nAMIntEstLgGjx
     const autocompleteApiUrl =
       "http://dataservice.accuweather.com/locations/v1/cities/autocomplete?";
 

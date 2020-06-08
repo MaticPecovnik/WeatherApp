@@ -15,7 +15,7 @@ const useCurrentLocationWeather = () => {
     WeatherText: "",
   });
 
-  const apiKey = "apikey=Hydrjh5zJvGkKsYIM4nAMIntEstLgGjx";
+  const apiKey = "apikey=R9EfisYbJAGY8KGcfymWyGAYGuNUdrIU"; //apikey=R9EfisYbJAGY8KGcfymWyGAYGuNUdrIU apikey=Hydrjh5zJvGkKsYIM4nAMIntEstLgGjx
 
   const getGeolocation = () => {
     var options = {
@@ -80,7 +80,6 @@ const useCurrentLocationWeather = () => {
       // GET current weather
       fetch(currWeatherApiUrl + `${locationInfo.apiLocalID}?` + apiKey)
         .then((res) => {
-          console.log(res);
           res.json().then((data) => {
             setCurrentWeatherInfo({
               temperature: Math.floor(data[0].Temperature.Metric.Value),

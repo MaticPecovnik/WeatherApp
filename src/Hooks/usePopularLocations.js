@@ -4,7 +4,7 @@ const usePopularLocations = () => {
   let [popularLocations, setPopularLocations] = useState([]);
   let finalPopularLocations = [];
 
-  const apiKey = "apikey=Hydrjh5zJvGkKsYIM4nAMIntEstLgGjx";
+  const apiKey = "apikey=R9EfisYbJAGY8KGcfymWyGAYGuNUdrIU"; //apikey=R9EfisYbJAGY8KGcfymWyGAYGuNUdrIU apikey=Hydrjh5zJvGkKsYIM4nAMIntEstLgGjx
   const apiUrl =
     "http://dataservice.accuweather.com/currentconditions/v1/topcities/50?" +
     apiKey;
