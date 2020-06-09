@@ -25,8 +25,9 @@
 .app_name {
   color: white;
   font-size: 3.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .current_location_sup {
-  width: 65%;
+  width: 60%;
 }

@@ -3,6 +3,7 @@ import React from "react";
 import "./PopularLocationsCard.css";
 
 import usePopularLocationImage from "../Hooks/usePopularLocationImage";
+import { Link } from "react-router-dom";
 
 const PopularLocationsCard = ({ location }) => {
   //calculates the local time based on the locations GMT offset
@@ -46,7 +47,10 @@ const PopularLocationsCard = ({ location }) => {
     : (apiWeatherIconUrl = `https://developer.accuweather.com/sites/default/files/0${locationCurrentWeather.locationWeatherIcon}-s.png`);
 
   return (
-    <div className="pop_location_card__container">
+    <Link
+      to={`/location/${locationInfo.locationName}/${locationInfo.locationCountryName}`}
+      className="pop_location_card__container"
+    >
       <div className="general_info__container">
         <div className="name__container">
           {locationInfo.locationName}, {locationInfo.locationCountryName}
@@ -76,7 +80,7 @@ const PopularLocationsCard = ({ location }) => {
           ></img>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

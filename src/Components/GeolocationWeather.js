@@ -1,5 +1,6 @@
 import React from "react";
 import useCurrentLocationWeather from "../Hooks/useCurrentLocationWeather";
+import { Link } from "react-router-dom";
 
 import HeaderCurrentWeather from "../Containers/HeaderCurrentWeather";
 import HeaderDayForecast from "../Containers/HeaderDayForecast";
@@ -14,18 +15,21 @@ const GeolocationWeather = () => {
   ] = useCurrentLocationWeather();
 
   if (
-    locationInfo.LocalizedName !== "" &&
+    locationInfo.LocationName !== "" &&
     currentWeatherInfo.WeatherText !== "" &&
     forecast.length !== 0
   ) {
     return (
       <div className="current_location_sub">
-        <div className="weather__container_sup">
+        <Link
+          to={`/location/${locationInfo.LocationName}/${locationInfo.CountryName}`}
+          className="weather__container_sup"
+        >
           <HeaderCurrentWeather
             locationInfo={locationInfo}
             currentWeatherInfo={currentWeatherInfo}
           />
-        </div>
+        </Link>
         <div className="forecast__container">
           {forecast.map((dailyForecast, i) => {
             return <HeaderDayForecast key={i} dailyForecast={dailyForecast} />;

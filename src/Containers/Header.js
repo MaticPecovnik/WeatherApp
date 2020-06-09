@@ -3,6 +3,7 @@ import React from "react";
 import GeolocationWeather from "../Components/GeolocationWeather";
 
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -14,11 +15,9 @@ const Header = () => {
           className="app_logo"
         />
       </div>
-      <div className="app_name__container">
-        <h1 className="app_name">
-          <u>Weatherify</u>
-        </h1>
-      </div>
+      <Link to="/" className="app_name__container">
+        <h1 className="app_name">Weatherify</h1>
+      </Link>
       <div className="current_location_sup">
         <GeolocationWeather />
       </div>
