@@ -1,34 +1,25 @@
 import React, { useState, useEffect } from "react";
 import "./SelectedLocation.css";
+import useSelectedLocationWeather from "../Hooks/useSelectedLocationWeather";
 
-const SelectedLocation = ({ match }) => {
-  const [forecast, setForecast] = useState([]);
-
-  const locationInfo = {
-    cityLocalizedName: match.params.cityName,
-    cityCountryID: match.params.countryID,
+const SelectedLocation = (props) => {
+  const inputLocationInfo = {
+    cityLocalizedName: props.match.params.cityName,
+    cityCountryID: props.match.params.countryID,
+    cityKey: props.location.state,
   };
 
-  useEffect(() => {
-    if (forecast.length > 0) {
-      console.log(forecast);
-    }
-  }, [forecast]);
-
-  useEffect(() => {
-    const openWeatherApiKey = "48f6c5dc045dd8ad305f552108ec5d49";
-    const openWeatherApiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${locationInfo.cityLocalizedName},${locationInfo.cityCountryID}&appid=${openWeatherApiKey}`;
-
-    fetch(openWeatherApiUrl)
-      .then((res) => res.json().then((data) => setForecast(data.list)))
-      .catch((err) => console.log(err));
-  }, [locationInfo.cityCountryID, locationInfo.cityLocalizedName]);
-
-  return (
-    <div>
-      {locationInfo.cityLocalizedName},{locationInfo.cityCountryID}
-    </div>
+  const [
+    forecastInfo,
+    currentWeatherInfo,
+    fullLocationInfo,
+  ] = useSelectedLocationWeather(
+    inputLocationInfo.cityLocalizedName,
+    inputLocationInfo.cityCountryID,
+    inputLocationInfo.cityKey
   );
+
+  return <div></div>;
 };
 
 export default SelectedLocation;

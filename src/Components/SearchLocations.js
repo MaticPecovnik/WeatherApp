@@ -82,7 +82,10 @@ const SearchLocations = () => {
         {suggestionList.map((suggestion, k) => {
           return (
             <Link
-              to={`/location/${suggestion.LocalizedName}/${suggestion.Country.ID}`}
+              to={{
+                pathname: `/location/${suggestion.LocalizedName}/${suggestion.Country.ID}`,
+                state: suggestion.Key,
+              }}
               key={k}
               className="suggestion"
             >

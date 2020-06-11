@@ -48,7 +48,10 @@ const PopularLocationsCard = ({ location }) => {
 
   return (
     <Link
-      to={`/location/${locationInfo.locationName}/${locationInfo.locationCountryName}`}
+      to={{
+        pathname: `/location/${locationInfo.locationName}/${locationInfo.locationCountryName}`,
+        state: locationInfo.apiLocationKey,
+      }}
       className="pop_location_card__container"
     >
       <div className="general_info__container">

@@ -22,7 +22,10 @@ const GeolocationWeather = () => {
     return (
       <div className="current_location_sub">
         <Link
-          to={`/location/${locationInfo.LocationName}/${locationInfo.CountryName}`}
+          to={{
+            pathname: `/location/${locationInfo.LocationName}/${locationInfo.CountryName}`,
+            state: locationInfo.apiLocalID,
+          }}
           className="weather__container_sup"
         >
           <HeaderCurrentWeather
