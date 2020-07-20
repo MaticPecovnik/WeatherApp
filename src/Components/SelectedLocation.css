@@ -1,0 +1,49 @@
+.selected_location__container {
+  margin: 2.5% 10%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 29% 69%;
+  grid-template-rows: 39% 59%;
+  column-gap: 2%;
+  row-gap: 2%;
+  grid-template-areas:
+    "basicInfo forecast"
+    "currentWeather forecast";
+}
+
+.basic_info__container {
+  grid-area: basicInfo;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 4rem 0;
+}
+
+.city_name__container {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.current_info__container {
+  grid-area: currentWeather;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.current_weather_icon {
+  width: 50%;
+}
+
+.forecast_info__container {
+  grid-area: forecast;
+  width: 100%;
+}
